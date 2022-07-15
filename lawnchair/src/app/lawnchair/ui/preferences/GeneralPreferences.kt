@@ -29,7 +29,6 @@ import app.lawnchair.preferences2.asState
 import app.lawnchair.preferences2.preferenceManager2
 import app.lawnchair.ui.preferences.components.ExpandAndShrink
 import app.lawnchair.ui.preferences.components.FontPreference
-import app.lawnchair.ui.preferences.components.IconShapePreference
 import app.lawnchair.ui.preferences.components.NavigationActionPreference
 import app.lawnchair.ui.preferences.components.NotificationDotsPreference
 import app.lawnchair.ui.preferences.components.PreferenceGroup
@@ -87,7 +86,6 @@ fun GeneralPreferences() {
                 destination = subRoute(name = GeneralRoutes.ICON_PACK),
                 subtitle = iconStyleSubtitle,
             )
-            IconShapePreference()
             val enableFontSelection = prefs2.enableFontSelection.asState().value
             if (enableFontSelection) {
                 FontPreference(
@@ -114,27 +112,6 @@ fun GeneralPreferences() {
                 preference = prefs2.accentColor,
                 label = stringResource(id = R.string.accent_color),
             )
-        }
-        val wrapAdaptiveIcons = prefs.wrapAdaptiveIcons.getAdapter()
-        PreferenceGroup(
-            heading = stringResource(id = R.string.auto_adaptive_icons_label),
-            description = stringResource(id = (R.string.adaptive_icon_background_description)),
-            showDescription = wrapAdaptiveIcons.state.value,
-        ) {
-            SwitchPreference(
-                adapter = wrapAdaptiveIcons,
-                label = stringResource(id = R.string.auto_adaptive_icons_label),
-                description = stringResource(id = R.string.auto_adaptive_icons_description),
-            )
-            ExpandAndShrink(visible = wrapAdaptiveIcons.state.value) {
-                SliderPreference(
-                    label = stringResource(id = R.string.background_lightness_label),
-                    adapter = prefs.coloredBackgroundLightness.getAdapter(),
-                    valueRange = 0F..1F,
-                    step = 0.1f,
-                    showAsPercentage = true,
-                )
-            }
         }
     }
 }

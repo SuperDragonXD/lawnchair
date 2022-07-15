@@ -35,9 +35,12 @@ fun IconShapePreference(
         listOf<ListPreferenceEntry<IconShape>>(
             ListPreferenceEntry(systemShape) { stringResource(id = R.string.icon_shape_system) },
             ListPreferenceEntry(IconShape.Circle) { stringResource(id = R.string.icon_shape_circle) },
-            ListPreferenceEntry(IconShape.Cupertino) { stringResource(id = R.string.icon_shape_rounded_square) },
+            ListPreferenceEntry(IconShape.Square) { stringResource(id = R.string.icon_shape_square) },
+            ListPreferenceEntry(IconShape.RoundedSquare) { stringResource(id = R.string.icon_shape_rounded_square) },
             ListPreferenceEntry(IconShape.Squircle) { stringResource(id = R.string.icon_shape_squircle) },
             ListPreferenceEntry(IconShape.Sammy) { stringResource(id = R.string.icon_shape_sammy) },
+            ListPreferenceEntry(IconShape.Teardrop) { stringResource(id = R.string.icon_shape_teardrop) },
+            ListPreferenceEntry(IconShape.Cupertino) { stringResource(id = R.string.icon_shape_cupertino) },
         )
     }
 
