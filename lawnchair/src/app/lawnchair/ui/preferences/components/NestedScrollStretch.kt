@@ -121,7 +121,7 @@ private class NestedScrollStretchConnection(context: Context, invalidate: Runnab
                 bottomEdgeEffect.onRelease()
             }
         }
-        return avaiable
+        return available
     }
 
     override suspend fun onPreFling(available: Velocity): Velocity {
