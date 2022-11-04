@@ -112,6 +112,7 @@ private class NestedScrollStretchConnection(context: Context, invalidate: Runnab
             availableY != 0f -> {
                 if (availableY > 0f) {
                     topEdgeEffect.onPull(availableY / height)
+                    return Offset.Zero
                 } else {
                     bottomEdgeEffect.onPull(-availableY / height)
                 }
