@@ -135,9 +135,10 @@ private class NestedScrollStretchConnection(context: Context, invalidate: Runnab
         val availableY = available.y
         if (availableY > 0f) {
             topEdgeEffect.onAbsorb(availableY.toInt())
+            return Velocity.Zero
         } else {
             bottomEdgeEffect.onAbsorb(-availableY.toInt())
+            return Velocity(0f, availableY)
         }
-        return Velocity.Zero
     }
 }
