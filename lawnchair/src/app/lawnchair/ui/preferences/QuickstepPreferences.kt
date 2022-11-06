@@ -14,6 +14,7 @@ import app.lawnchair.preferences2.preferenceManager2
 import app.lawnchair.ui.preferences.components.ExpandAndShrink
 import app.lawnchair.ui.preferences.components.PreferenceGroup
 import app.lawnchair.ui.preferences.components.PreferenceLayout
+import app.lawnchair.ui.preferences.components.PreferenceTemplate
 import app.lawnchair.ui.preferences.components.SliderPreference
 import app.lawnchair.ui.preferences.components.SwitchPreference
 import app.lawnchair.util.isOnePlusStock
@@ -41,6 +42,18 @@ fun QuickstepPreferences() {
                 adapter = prefs.recentsTranslucentBackground.getAdapter(),
                 label = stringResource(id = R.string.translucent_background),
             )
+            SwitchPreference(
+                adapter = fun a(){}
+                label = "Use GestureNavContract APIs",
+                description = "Disabled due to app transition being Fade",
+                enabled = false
+            )
+            PreferenceTemplate(
+                title = { Text(text = "App Transition") },
+                description = { Text(text = "Fade") },
+                enabled = true,
+            )
+
         }
         PreferenceGroup(heading = stringResource(id = R.string.recents_actions_label)) {
             if (!isOnePlusStock) {
