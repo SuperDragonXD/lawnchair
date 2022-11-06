@@ -46,19 +46,7 @@ fun TopBar(
 ) {
     val backDispatcher = LocalOnBackPressedDispatcherOwner.current?.onBackPressedDispatcher
 
-    val containerColor: Color = MaterialTheme.colorScheme.surface
-    val scrolledContainerColor: Color = MaterialTheme.colorScheme.surfaceColorAtElevation(3.0.dp)
-
-    fun containerColor(colorTransitionFraction: Float): Color {
-        return lerp(
-            containerColor,
-            scrolledContainerColor,
-            FastOutLinearInEasing.transform(colorTransitionFraction)
-        )
-    }
-
-    val backgroundColor = containerColor(scrollBehavior?.state?.overlappedFraction ?: 0f)
-
+    val backgroundColor = MaterialTheme.colorScheme.surface
     val foregroundColors = TopAppBarDefaults.centerAlignedTopAppBarColors(
         containerColor = Color.Transparent,
         scrolledContainerColor = Color.Transparent
