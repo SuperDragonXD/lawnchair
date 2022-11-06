@@ -43,7 +43,7 @@ fun QuickstepPreferences() {
                 label = stringResource(id = R.string.translucent_background),
             )
             SwitchPreference(
-                adapter = fun a(){}
+                adapter = null,
                 label = "Use GestureNavContract APIs",
                 description = "Disabled since launcher is a QuickSwitch provider. Force enable in Debug Menu",
                 enabled = false
