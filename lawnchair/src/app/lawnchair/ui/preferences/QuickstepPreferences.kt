@@ -45,7 +45,7 @@ fun QuickstepPreferences() {
             SwitchPreference(
                 adapter = fun a(){}
                 label = "Use GestureNavContract APIs",
-                description = "Disabled due to app transition being Fade",
+                description = "Disabled since launcher is a QuickSwitch provider. Force enable in Debug Menu",
                 enabled = false
             )
             PreferenceTemplate(
