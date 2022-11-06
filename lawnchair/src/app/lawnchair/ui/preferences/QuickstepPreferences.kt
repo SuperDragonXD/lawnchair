@@ -7,6 +7,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavGraphBuilder
+import androidx.compose.ui.Text
 import app.lawnchair.preferences.getAdapter
 import app.lawnchair.preferences.observeAsState
 import app.lawnchair.preferences.preferenceManager
@@ -35,8 +36,7 @@ fun QuickstepPreferences() {
     val lensAvailable = remember {
         context.packageManager.getLaunchIntentForPackage("com.google.ar.lens") != null
     }
-    var variable = true
-
+    
     PreferenceLayout(label = stringResource(id = R.string.quickstep_label)) {
         PreferenceGroup(heading = stringResource(id = R.string.general_label)) {
             SwitchPreference(
@@ -44,7 +44,7 @@ fun QuickstepPreferences() {
                 label = stringResource(id = R.string.translucent_background),
             )
             SwitchPreference(
-                adapter = variable,
+                adapter = prefs2.enableTaskbarOnPhone.getAdapter(),
                 label = "Use GestureNavContract APIs",
                 description = "Disabled since launcher is a QuickSwitch provider. Force enable in Debug Menu",
                 enabled = false
