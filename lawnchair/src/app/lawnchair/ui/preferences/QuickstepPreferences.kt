@@ -35,6 +35,7 @@ fun QuickstepPreferences() {
     val lensAvailable = remember {
         context.packageManager.getLaunchIntentForPackage("com.google.ar.lens") != null
     }
+    var variable = true
 
     PreferenceLayout(label = stringResource(id = R.string.quickstep_label)) {
         PreferenceGroup(heading = stringResource(id = R.string.general_label)) {
@@ -43,7 +44,7 @@ fun QuickstepPreferences() {
                 label = stringResource(id = R.string.translucent_background),
             )
             SwitchPreference(
-                adapter = null,
+                adapter = variable,
                 label = "Use GestureNavContract APIs",
                 description = "Disabled since launcher is a QuickSwitch provider. Force enable in Debug Menu",
                 enabled = false
