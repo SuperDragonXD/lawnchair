@@ -69,14 +69,12 @@ fun TopBar(
             },
             actions = actions,
             navigationIcon = {
-                if (backArrowVisible) {
-                        ClickableIcon(
+                backArrowVisible?.let {
+                    ClickableIcon(
                             imageVector = backIcon(),
                             onClick = { backDispatcher?.onBackPressed() },
                         )
-                } else {
-                    null
-                }
+                } 
             },
             scrollBehavior = scrollBehavior,
             colors = foregroundColors
