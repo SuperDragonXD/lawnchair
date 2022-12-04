@@ -63,4 +63,4 @@ fun Context.getSystemAccent(darkTheme: Boolean): Int {
 }
 
 @Composable
-fun dividerColor() = MaterialTheme.colorScheme.surfaceColorAtElevation(32.dp)
+fun dividerColor() = MaterialTheme.colorScheme.background
