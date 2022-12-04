@@ -17,7 +17,7 @@ import kotlin.math.roundToInt
 fun DividerColumn(
     modifier: Modifier = Modifier,
     color: Color = dividerColor(),
-    thickness: Dp = 1.dp,
+    thickness: Dp = 2.dp,
     startIndent: Dp = 0.dp,
     endIndent: Dp = 0.dp,
     dividersToSkip: Int = 0,
@@ -80,7 +80,7 @@ private fun Modifier.drawDividers(
             drawRect(
                 color = color,
 //                topLeft = Offset(startIndentPx, yPos.toFloat()),
-                size = Size(size.width /* - startIndentPx - endIndentPx */, thickness)
+                size = Size(size.width + startIndentPx + endIndentPx, thickness)
             )
         }
     }
