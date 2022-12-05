@@ -487,6 +487,12 @@ public class DeviceProfile {
 
             updateHotseatIconSize(iconSizePx);
 
+            // https://github.com/LawnchairLauncher/lawnchair/commit/2e465de10b8f63416c27f5183d8040333c7e2fb6
+            // mEnableDock = PreferenceExtensionsKt.firstBlocking(dockEnablePref);
+
+            hotseatBarSizePx = 0;
+            
+
             // Recalculate the available dimensions using the new hotseat size.
             updateAvailableDimensions(res);
         }
