@@ -1,13 +1,10 @@
 package app.lawnchair.ui.preferences.components
 
 import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.ContentAlpha
 import androidx.compose.material.LocalContentAlpha
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material3.MaterialTheme as Material3Theme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -35,7 +32,15 @@ fun PreferenceSearchScaffold(
 
     Scaffold(
         topBar = {
-            SearchBarBase {
+            Surface(
+                modifier = Modifier
+                    .statusBarsPadding()
+                    .windowInsetsPadding(WindowInsets.navigationBars.only(WindowInsetsSides.Horizontal + WindowInsetsSides.Top))
+                    .padding(horizontal = 16.dp, vertical = searchBarVerticalMargin)
+                    .height(searchBarHeight),
+                shape = MaterialTheme.shapes.large,
+                elevation = 2.dp
+            ) {
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -85,27 +90,6 @@ fun PreferenceSearchScaffold(
         }
     }
 }
-
-@Composable
-fun SearchBarBase(content: (@Composable RowScope.() -> Unit)? = null) {
-    Row(
-        content = content ?: {},
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier
-            .padding(top = 8.dp)
-            .padding(horizontal = 16.dp)
-            .fillMaxWidth()
-            .height(52.dp)
-            .background(
-                color = Material3Theme.colorScheme.onSurface,
-                shape = CircleShape,
-            ),
-    )
-}
-
-@Composable
-fun SearchBar() {}
-
 
 @Stable
 internal class MutablePaddingValues : PaddingValues {
