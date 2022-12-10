@@ -91,13 +91,12 @@ fun SearchBarBase(content: (@Composable RowScope.() -> Unit)? = null) {
         content = content ?: {},
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
-            .zIndex(1f)
             .padding(top = 8.dp)
             .padding(horizontal = 16.dp)
             .fillMaxWidth()
             .height(52.dp)
             .background(
-                color = Material3Theme.colorScheme.surfaceColorAtElevation(Elevation.Level2),
+                color = Material3Theme.colorScheme.onSurface,
                 shape = CircleShape,
             ),
     )
