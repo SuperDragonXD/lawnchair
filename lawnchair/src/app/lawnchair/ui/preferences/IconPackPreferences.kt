@@ -184,7 +184,7 @@ fun IconPackPreferences() {
                     },
                     value = ThemedIconsState.getForSettings(
                         themedIcons = themedIconsAdapter.state.value,
-                        drawerThemedIcons = drawerThemedIconsEnabled,
+                        drawerThemedIcons = drawerThemedIconsAdapter.state.value,
                     ),
                     onValueChange = {
                         themedIconsAdapter.onChange(newValue = it.themedIcons)
