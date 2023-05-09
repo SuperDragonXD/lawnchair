@@ -53,7 +53,7 @@ import kotlinx.serialization.json.Json
 import app.lawnchair.preferences.PreferenceManager as LawnchairPreferenceManager
 import com.android.launcher3.graphics.IconShape as L3IconShape
 
-class PreferenceManager2(private val context: Context) : PreferenceManager {
+class PreferenceManager2 private constructor(private val context: Context) : PreferenceManager {
 
     private val scope = MainScope()
     private val resourceProvider = DynamicResource.provider(context)
@@ -197,6 +197,12 @@ class PreferenceManager2(private val context: Context) : PreferenceManager {
             key = booleanPreferencesKey(name = "lock_home_screen_on_popup"),
             defaultValue = context.resources.getBoolean(R.bool.config_default_lock_home_screen_on_popup),
             onSet = { reloadHelper.reloadGrid() },
+    )
+
+    val showSystemSettingsEntryOnPopUp = preference(
+        key = booleanPreferencesKey(name = "show_system_settings_entry_on_popup"),
+        defaultValue = context.resources.getBoolean(R.bool.config_default_show_system_settings_entry_on_popup),
+        onSet = { reloadHelper.reloadGrid() },
     )
 
     val hideAppDrawerSearchBar = preference(

@@ -34,12 +34,13 @@ class UploaderService : Service() {
 
     private suspend fun startUpload() {
         while (uploadQueue.isNotEmpty()) {
-            val report = uploadQueue.poll()!!
+            var report = uploadQueue.poll()!!
+            @Suppress("LiftReturnOrAssignment")
             try {
-                report.link = UploaderUtils.upload(report)
+                report = report.copy(link = UploaderUtils.upload(report))
             } catch (e: Throwable) {
                 Log.d("UploaderService", "failed to upload bug report", e)
-                report.uploadError = true
+                report = report.copy(uploadError = true)
             } finally {
                 sendBroadcast(Intent(this, BugReportReceiver::class.java)
                     .setAction(BugReportReceiver.UPLOAD_COMPLETE_ACTION)

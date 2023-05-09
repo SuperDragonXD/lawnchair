@@ -16,6 +16,7 @@
   -->
 <resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- PreferenceDashboard -->
+    <string name="set_default_launcher_tip">Toque neste cartão para definir o Lawnchair como launcher padrão.</string>
     <string name="settings">Definições</string>
     <string name="general_label">Geral</string>
     <string name="general_description">Cores, Pacote de Ícones, Pontos de Notificação</string>
@@ -104,6 +105,7 @@
     <!-- IconPackPreferences -->
     <!-- <string name="icon_style" /> -->
     <string name="icon_pack">Pacote de Ícones</string>
+    <string name="themed_icon_pack">Fonte do Ícone Temático</string>
     <string name="system_icons">Ícones de Sistema</string>
     <string name="themed_icon_title">Ícones de Tema</string>
     <string name="themed_icons_off_label">Desligado</string>
@@ -178,8 +180,10 @@
     <string name="home_screen_lock_description">Impede modificações ao layout do ecrã inicial.</string>
     <string name="home_screen_unlock">Desbloquear Ecrã Inicial</string>
     <!-- used in popup menu-->
-    <string name="home_screen_lock_toggle_from_home_popup">Mostrar Botão de Bloqueio no Pop-Up</string>
     <string name="home_screen_locked">O Ecrã Inicial está bloqueado.</string>
+    <string name="popup_menu">Menu Flutuante</string>
+    <string name="home_screen_lock_toggle_from_home_popup">Mostrar Botão de Bloqueio</string>
+    <string name="show_system_settings_entry">Mostrar Entrada de Definições de Sistema</string>
     <string name="status_bar_label">Barra de Estado</string>
     <string name="show_status_bar">Mostrar Barra de Estado</string>
     <string name="dark_status_bar_label">Barra de Estado Escura</string>
@@ -265,6 +269,7 @@
     <string name="pref_search_auto_show_keyboard">Mostrar Teclado Automaticamente</string>
     <string name="fuzzy_search_title">Pesquisa Aproximada</string>
     <string name="fuzzy_search_desc">Correspondência aproximada para pesquisa de aplicações.</string>
+    <string name="max_search_result_count_title">Contagem Máxima de Resultados de Pesquisa</string>
     <!-- <string name="grid" /> -->
     <string name="app_drawer_columns">Colunas da Gaveta de Aplicações</string>
     <string name="row_height_label">Altura da Linha</string>
@@ -356,7 +361,6 @@
     <string name="label">Etiqueta</string>
     <string name="hide_from_drawer">Esconder da Gaveta de Aplicações</string>
     <string name="suggestion_pref_screen_title">Sugestões</string>
-    <string name="n_percent">%1$d%%</string>
     <!-- Bug reporting -->
     <string name="lawnchair_bug_report">Relatório de Erros do Lawnchair</string>
     <string name="crash_report_notif_title">%1$s Bloqueou</string>
@@ -399,4 +403,5 @@
     <string name="invalid_backup_file">Ficheiro de cópia de segurança inválido.</string>
     <string name="x_by_y">%1$d x %2$d</string>
     <string name="x_and_y">%s &amp; %s</string>
+    <string name="system_settings">Definições de Sistema</string>
 </resources>

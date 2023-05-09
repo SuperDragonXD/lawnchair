@@ -16,6 +16,7 @@
   -->
 <resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- PreferenceDashboard -->
+    <string name="set_default_launcher_tip">Dotknij tej karty, aby ustawić Lawnchair jako domyślny launcher.</string>
     <string name="settings">Ustawienia</string>
     <string name="general_label">Ogólne</string>
     <string name="general_description">Plakietki z powiadomieniami, paczka ikon, kolory</string>
@@ -51,7 +52,7 @@
     <string name="workspace_increase_max_grid_size_description">Zwiększ maksymalny dozwolony rozmiar siatki ekranu głównego z 10 x 10 do 20 x 20.</string>
     <string name="always_reload_icons_label">Zawsze odświeżaj ikony</string>
     <string name="always_reload_icons_description">Unikaj używania buforowanych ikon z pakietów ikon</string>
-    <string name="transparent_background_icons">Przezroczyste ikony tematyczne</string>
+    <string name="transparent_background_icons">Przezroczysty styl ikon</string>
     <string name="transparent_background_icons_description">Użyj przezroczystego tła na ikonach tematycznych</string>
     <string name="smartspace_mode_selection">\"W skrócie\" wybór dostawcy</string>
     <!-- GeneralPreferences -->
@@ -85,11 +86,11 @@
     <string name="theme_follow_wallpaper">Dopasuj do tapety</string>
     <string name="accent_color">Kolor Akcentujący</string>
     <!-- CustomIconShapePreference -->
-    <string name="custom_icon_shape">Własny kształt ikony</string>
+    <string name="custom_icon_shape">Niestandardowy kształt ikony</string>
     <string name="custom_icon_shape_create">Stwórz własny kształt ikony</string>
     <string name="custom_icon_shape_edit">Edytuj własny kształt ikony</string>
     <string name="icon_shape_corner">Kształt narożnika</string>
-    <string name="icon_shape_corner_round">Okrągły</string>
+    <string name="icon_shape_corner_round">Zaokrąglony</string>
     <string name="icon_shape_corner_squircle">Gładki</string>
     <string name="icon_shape_corner_cut">Wycięty</string>
     <string name="icon_shape_top_left">Lewy górny</string>
@@ -104,6 +105,7 @@
     <!-- IconPackPreferences -->
     <!-- <string name="icon_style" /> -->
     <string name="icon_pack">Paczka ikon</string>
+    <string name="themed_icon_pack">Źródło ikon tematycznych</string>
     <string name="system_icons">Ikony systemowe</string>
     <string name="themed_icon_title">Ikony tematyczne</string>
     <string name="themed_icons_off_label">Wyłączono</string>
@@ -178,8 +180,10 @@
     <string name="home_screen_lock_description">Zapobiega zmianie układu ekranu głównego.</string>
     <string name="home_screen_unlock">Odblokuj ekran główny</string>
     <!-- used in popup menu-->
-    <string name="home_screen_lock_toggle_from_home_popup">Pokaż przycisk blokady w wyskakującym oknie</string>
     <string name="home_screen_locked">Ekran główny jest zablokowany.</string>
+    <string name="popup_menu">Wyskakujące menu</string>
+    <string name="home_screen_lock_toggle_from_home_popup">Pokaż Przycisk Blokady</string>
+    <string name="show_system_settings_entry">Pokaż Wpis Ustawień Systemu</string>
     <string name="status_bar_label">Pasek stanu</string>
     <string name="show_status_bar">Pokaż pasek stanu</string>
     <string name="dark_status_bar_label">Ciemny pasek statusu</string>
@@ -265,6 +269,7 @@
     <string name="pref_search_auto_show_keyboard">Automatycznie pokazuj klawiaturę</string>
     <string name="fuzzy_search_title">Wyszukiwanie rozmyte</string>
     <string name="fuzzy_search_desc">Przybliżone dopasowanie dla wyszukiwań aplikacji.</string>
+    <string name="max_search_result_count_title">Maks. liczba wyników wyszukiwania</string>
     <!-- <string name="grid" /> -->
     <string name="app_drawer_columns">Kolumny szuflady aplikacji</string>
     <string name="row_height_label">Wysokość wiersza</string>
@@ -358,7 +363,6 @@
     <string name="label">Etykieta</string>
     <string name="hide_from_drawer">Ukryj w szufladzie aplikacji</string>
     <string name="suggestion_pref_screen_title">Sugestie</string>
-    <string name="n_percent">%1$d%%</string>
     <!-- Bug reporting -->
     <string name="lawnchair_bug_report">Raport błędów Lawnchair</string>
     <string name="crash_report_notif_title">%1$s uległ awarii</string>
@@ -401,4 +405,5 @@
     <string name="invalid_backup_file">Niewłaściwy plik kopii zapasowej.</string>
     <string name="x_by_y">%1$d × %2$d</string>
     <string name="x_and_y">%s i %s</string>
+    <string name="system_settings">Ustawienia systemowe</string>
 </resources>

@@ -16,6 +16,7 @@
   -->
 <resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- PreferenceDashboard -->
+    <string name="set_default_launcher_tip">Tap this card to set Lawnchair as your default launcher.</string>
     <string name="settings">Instellings</string>
     <string name="general_label">Algemeen</string>
     <string name="general_description">Notification Dots, Icon Pack</string>
@@ -104,6 +105,7 @@
     <!-- IconPackPreferences -->
     <!-- <string name="icon_style" /> -->
     <string name="icon_pack">Ikoon pakket</string>
+    <string name="themed_icon_pack">Themed Icon Source</string>
     <string name="system_icons">Stelsel ikone</string>
     <string name="themed_icon_title">Tema ikone</string>
     <string name="themed_icons_off_label">Af</string>
@@ -178,8 +180,10 @@
     <string name="home_screen_lock_description">Prevents changes to the home screen layout.</string>
     <string name="home_screen_unlock">Ontsluit tuisskerm</string>
     <!-- used in popup menu-->
-    <string name="home_screen_lock_toggle_from_home_popup">Wys sluitknoppie in opspringer</string>
     <string name="home_screen_locked">Home Screen is locked.</string>
+    <string name="popup_menu">Pop-up Menu</string>
+    <string name="home_screen_lock_toggle_from_home_popup">Show Lock Button</string>
+    <string name="show_system_settings_entry">Show System Settings Entry</string>
     <string name="status_bar_label">Statusbalk</string>
     <string name="show_status_bar">Wys Statusbalk</string>
     <string name="dark_status_bar_label">Donker Statusbalk</string>
@@ -265,6 +269,7 @@
     <string name="pref_search_auto_show_keyboard">Wys sleutelbord outomaties</string>
     <string name="fuzzy_search_title">Fuzzy soektog</string>
     <string name="fuzzy_search_desc">Geskatte passing vir toepassingsoektogte.</string>
+    <string name="max_search_result_count_title">Max Search Result Count</string>
     <!-- <string name="grid" /> -->
     <string name="app_drawer_columns">Programlaaikolomme</string>
     <string name="row_height_label">Ry Hoogte</string>
@@ -356,7 +361,6 @@
     <string name="label">Etiket</string>
     <string name="hide_from_drawer">Versteek uit App-laai</string>
     <string name="suggestion_pref_screen_title">Voorstelle</string>
-    <string name="n_percent">%1$d%%</string>
     <!-- Bug reporting -->
     <string name="lawnchair_bug_report">Lawnchair Bug Report</string>
     <string name="crash_report_notif_title">%1$s het omgeval</string>
@@ -399,4 +403,5 @@
     <string name="invalid_backup_file">Ongeldige rugsteunlêer.</string>
     <string name="x_by_y">%1$d × %2$d</string>
     <string name="x_and_y">%s &amp; %s</string>
+    <string name="system_settings">System Settings</string>
 </resources>
