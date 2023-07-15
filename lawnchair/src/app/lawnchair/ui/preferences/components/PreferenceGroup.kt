@@ -46,7 +46,7 @@ fun PreferenceGroup(
         Surface(
             modifier = Modifier.padding(horizontal = 16.dp),
             shape = MaterialTheme.shapes.large,
-            tonalElevation = 1.dp
+            tonalElevation = 0.dp
         ) {
             if (showDividers) {
                 DividerColumn(
