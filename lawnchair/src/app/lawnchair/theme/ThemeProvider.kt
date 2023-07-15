@@ -79,7 +79,7 @@ class ThemeProvider(private val context: Context) {
             val wallpaperPrimary = wallpaperManager.wallpaperColors?.primaryColor
             getColorScheme(wallpaperPrimary ?: ColorOption.LawnchairBlue.color)
         }
-        is ColorOption.CustomColor -> getColorScheme(accentColor.color)
+        is ColorOption.CustomColor -> getColorScheme(accentColor.color).let { GrayColorScheme(it) }
         else -> getColorScheme(ColorOption.LawnchairBlue.color)
     }
 
