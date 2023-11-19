@@ -36,7 +36,7 @@
         android:layout_weight="1"
         android:background="@drawable/all_apps_tabs_background"
         android:text="@string/all_apps_personal_tab"
-        android:textColor="@color/all_apps_tab_text"
+        android:textColor="@color/all_apps_button_tab_text"
         android:textSize="14sp"
         style="?android:attr/borderlessButtonStyle" />
 
@@ -47,7 +47,7 @@
         android:layout_marginStart="@dimen/all_apps_tabs_button_horizontal_padding"
         android:layout_weight="1"
         android:background="@drawable/all_apps_tabs_background"
-        android:text="@string/all_apps_work_tab"
+        android:text="@string/all_apps_button_work_tab"
         android:textColor="@color/all_apps_tab_text"
         android:textSize="14sp"
         style="?android:attr/borderlessButtonStyle" />
